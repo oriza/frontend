@@ -8,6 +8,6 @@ main {
 @media (max-width: 1025px) {
   main {
     margin-left: 0;
-    padding: 5%;
+    padding: 20px;
   }
 }

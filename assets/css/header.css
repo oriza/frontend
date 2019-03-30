@@ -75,6 +75,7 @@
   .main-header,
   .sub-header {
     position: relative;
+    padding: 0 20px;
   }
   .sub-header {
     display: none;
