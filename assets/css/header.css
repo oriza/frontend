@@ -1,0 +1,56 @@
+.main-header,
+.sub-header {
+  position: fixed;
+  height: 66px;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.main-header {
+  top: 0;
+  background: #132054;
+  color: white;
+}
+
+.main-header p {
+  font-size: 12px;
+}
+
+.sub-header {
+  top: 66px;
+  /* 
+    background: #E8EAF1;
+    border-bottom: 2px solid #D8D8D8;
+  */
+  padding-left: 0;
+}
+
+.aside-toggle {
+  height: 66px;
+  width: 200px;
+  background: #0E1530;
+  border-bottom: 2px solid #D8D8D8;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.aside-toggle svg {
+  margin-left: 5px;
+}
+
+.categories {
+  padding-left: 20px;
+}
+
+.categories li {
+  margin-right: 10px;
+}
+
+.categories .checkbox-button label {
+  border: 2px solid #DADADA;
+}
+
+.categories .checkbox-button input[type="checkbox"]:checked + label {
+  border: 2px solid #ED4568;
+}

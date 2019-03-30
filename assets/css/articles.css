@@ -1,0 +1,137 @@
+.articles {
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.article {
+  width: 290px;
+  height: 330px;
+  margin: 20px 10px;
+  background: white;
+  border-radius: 5px;
+  padding: 0 20px 20px;
+  -webkit-box-shadow: 1px 1px 5px 0px rgba(102,102,102,0.5);
+  -moz-box-shadow: 1px 1px 5px 0px rgba(102,102,102,0.5);
+  box-shadow: 1px 1px 5px 0px rgba(102,102,102,0.5);
+}
+
+.article header {
+  height: 50px;
+}
+
+.article h2,
+.article p {
+  line-height: 1.5;
+}
+
+.article h2 {
+  margin-bottom: 10px;
+}
+
+.article h2 a {
+  color: #264BE5;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.article h2 a:visited {
+  color: #132054;
+}
+
+.article p {
+  font-size: 14px;
+}
+
+.article time {
+  font-size: 14px;
+}
+
+.load-more-container {
+  width: 100%;
+  text-align: center;
+}
+
+.load-more {
+  width: 90%;
+  height: 45px;
+  max-width: 350px;
+  margin: 30px auto;
+  background: #132054;
+  border: 0;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.article img {
+  height: 15px;
+  width: auto;
+}
+
+.article .logo-hvg {
+  height: 18px;
+}
+
+.article .logo-magyar-idok {
+  height: 23px;
+}
+
+.article .logo-24 {
+  height: 16px;
+}
+
+.article .logo-vs {
+  height: 30px;
+}
+
+.article .logo-index {
+  height: 13px;
+}
+
+.article .logo-atlatszo {
+  height: 36px;
+}
+
+.article .logo-mandiner {
+  height: 13px;
+}
+
+.article .logo-magyar-nemzet {
+  height: 22px;
+}
+
+.article .logo-origo {
+  height: 20px;
+}
+
+.article .logo-magyar-narancs {
+  height: 28px;
+}
+
+.article .logo-888 {
+  height: 20px;
+}
+
+.article .logo-168-ora {
+  height: 26px;
+}
+
+.article .logo-alfahir {
+  height: 30px;
+}
+
+.article .logo-nyugat {
+  height: 20px;
+}
+
+.article .logo-pestisracok {
+  height: 40px;
+}
+
+.article .logo-merce {
+  height: 25px;
+}
+

@@ -1,0 +1,52 @@
+*,
+ *:before,
+ *:after {
+   box-sizing: border-box;
+}
+
+body {
+  margin-top: 132px;
+  background: #E8EAF1;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+}
+
+.checkbox-button input {
+  display: none;
+}
+
+.checkbox-button label {
+  display: inline-block;
+  height: 30px;
+  background: transparent;
+  bottom: 2px solid transparent;
+  border-radius: 50px;
+  color: #132054;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 28px;
+  padding: 0 10px;
+}
+
+.checkbox-button input:checked + label {
+  background: #ED4568;
+  border: 2px solid #ED4568;
+  color: white;
+}
+
+
+.inline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

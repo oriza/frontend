@@ -1,0 +1,14 @@
+<aside>
+  <ul class="sites">
+    <%= for site <- @sites do %>
+      <li class="site checkbox-button">
+        <%= if site.state === "selected" do %>
+          <input type="checkbox" value="<%= site.id %>" name="site" id="site-<%= site.id %>" checked="true">
+        <% else %>
+          <input type="checkbox" value="<%= site.id %>" name="site" id="site-<%= site.id %>">
+        <% end %>
+        <label for="site-<%= site.id %>"><%= site.name %></label>
+      </li>
+    <% end %>
+  </ul>
+</aside>

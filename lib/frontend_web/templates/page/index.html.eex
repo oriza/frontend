@@ -1,0 +1,23 @@
+<ul class="articles inline">
+    <%= for article <- @articles do %>
+    <li class="article">
+      <header class="inline">
+        <time datetime="<%= article.published_at %>">
+          <%= format_datetime article.published_at %>
+        </time>        
+        <a href="#">
+          <img class="logo-<%= article.site.slug %>" src="images/sites/<%= article.site.slug %>.png" alt="<%= article.site.name %> logó" />
+        </a>
+      </header>
+      <h2>
+        <a href="<%= article.url %>" target="_blank" rel="noopener">
+          <%= article.title %>
+        </a>
+      </h2>
+      <p><%= truncate article.description %></p>
+    </li>
+  <% end %>
+</ul>
+<div class="load-more-container">
+  <button type="button" class="load-more">Még több cikk</button>
+</div>
