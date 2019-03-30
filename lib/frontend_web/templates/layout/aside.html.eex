@@ -2,7 +2,7 @@
   <ul class="sites">
     <%= for site <- @sites do %>
       <li class="site checkbox-button">
-        <%= if site.state === "selected" do %>
+        <%= if Enum.find(@selected_site_ids, fn id -> id === site.id end) do %>
           <input type="checkbox" value="<%= site.id %>" name="site" id="site-<%= site.id %>" checked="true">
         <% else %>
           <input type="checkbox" value="<%= site.id %>" name="site" id="site-<%= site.id %>">

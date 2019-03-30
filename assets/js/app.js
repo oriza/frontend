@@ -31,6 +31,23 @@ const siteCheckboxes = Array.from(document.querySelectorAll('.site input'))
 const categoryCheckboxes = Array.from(document.querySelectorAll('.category input'))
 const loadMoreButton = document.querySelector('.load-more')
 
+function getSelectedSites () {
+  const selectedSitesFromCookies = getCookie('sites')
+
+  if (!selectedSitesFromCookies) {
+    const selectedSites = checkboxesToParams('sites', siteCheckboxes)
+    document.cookie = selectedSites.split(',').join('.')
+  }
+}
+
+function getCookie (name) {
+  const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'))
+  
+  if (match) {
+    return match[2]
+  }
+}
+
 function checkboxesToParams (name, checkboxes) {
     const ids = checkboxes
       .filter(input => input.checked)
@@ -42,9 +59,10 @@ function checkboxesToParams (name, checkboxes) {
 function updateArticles (_event, isLoadMore = false) {
   const siteParams = checkboxesToParams('sites', siteCheckboxes)
   const categoryParams = checkboxesToParams('categories', categoryCheckboxes)
-  const lastArticlesDateTime = document
-    .querySelector('.article:last-of-type time')
-    .getAttribute('datetime')
+  const lastArticle = document.querySelector('.article:last-of-type time')
+  const lastArticlesDateTime = lastArticle ? lastArticle.getAttribute('datetime') : new Date()
+
+  document.cookie = siteParams.split(',').join('.')
 
   const till = isLoadMore ? lastArticlesDateTime : ''
 
@@ -106,6 +124,8 @@ function formatDatetime (datetime) {
     return distanceInWordsStrict(new Date(), datetime, {locale: hu})
   }
 }
+
+getSelectedSites()
 
 siteCheckboxes.forEach(checkbox => checkbox.addEventListener('change', updateArticles))
 categoryCheckboxes.forEach(checkbox => checkbox.addEventListener('change', updateArticles))
