@@ -1,11 +1,14 @@
 .articles {
   width: 100%;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .article {
-  width: 290px;
-  height: 330px;
+  width: 90%;
+  max-width: 320px;
+  height: auto;
+  min-height: 330px;
   margin: 20px 10px;
   background: white;
   border-radius: 5px;
@@ -54,10 +57,11 @@
 .load-more {
   width: 90%;
   height: 45px;
-  max-width: 350px;
+  max-width: 320px;
   margin: 30px auto;
   background: #132054;
   border: 0;
+  border-radius: 5px;
   color: white;
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
@@ -135,3 +139,14 @@
   height: 25px;
 }
 
+@media (max-width: 1025px) {
+  .aside-toggle {
+    display: none;
+  }
+}
+
+@media (max-width: 769px) {
+ .article {
+    height: auto;
+  }
+}

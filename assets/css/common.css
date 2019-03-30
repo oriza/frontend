@@ -5,7 +5,7 @@
 }
 
 body {
-  margin-top: 132px;
+  margin-top: 90px;
   background: #E8EAF1;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
@@ -16,6 +16,7 @@ a {
 }
 
 button {
+  background: none;
   border: 0;
   cursor: pointer;
 }
@@ -49,4 +50,18 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.mobile-show {
+  display: none !important;
+}
+
+@media (max-width: 1025px) {
+  body {
+    margin-top: 0;    
+  }
+
+  .mobile-show {
+    display: flex !important;
+  }
 }

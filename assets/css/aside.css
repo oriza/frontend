@@ -6,7 +6,8 @@ aside {
   width: 200px;
   background: #0E1530;
   color: white;
-  padding: 0 20px;
+  padding: 0 20px 0 15px;
+  transition: transform .5s;
   overflow-y: auto;
 }
 
@@ -18,4 +19,39 @@ aside {
   margin-bottom: 12px;
   color: white;
   text-transform: capitalize;
+}
+
+aside h3 {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+aside .mobile-show {
+  justify-content: center;
+}
+
+aside .close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 15px;
+}
+
+@media (max-width: 1025px) {
+  aside {
+    top: 0;
+    width: 100%;
+    padding-top: 50px;
+    text-align: center;
+    transform: translate(100%);
+  }
+
+  aside.active {
+    transform: translate(0);
+  }
+
+  .sites {
+    margin-bottom: 30px;
+  }
 }

@@ -4,3 +4,10 @@ main {
   padding: 35px 30px;
   padding-top: 0;
 }
+
+@media (max-width: 1025px) {
+  main {
+    margin-left: 0;
+    padding: 5%;
+  }
+}

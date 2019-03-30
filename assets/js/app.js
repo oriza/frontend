@@ -30,6 +30,9 @@ const articleList = document.querySelector('.articles')
 const siteCheckboxes = Array.from(document.querySelectorAll('.site input'))
 const categoryCheckboxes = Array.from(document.querySelectorAll('.category input'))
 const loadMoreButton = document.querySelector('.load-more')
+const menuButton = document.querySelector('.menu-button')
+const sidebarCloseButton = document.querySelector('aside .close-button')
+const sidebar = document.querySelector('aside')
 
 function getSelectedSites () {
   const selectedSitesFromCookies = getCookie('sites')
@@ -125,8 +128,14 @@ function formatDatetime (datetime) {
   }
 }
 
+function toggleMenu () {
+  sidebar.classList.toggle('active')
+}
+
 getSelectedSites()
 
 siteCheckboxes.forEach(checkbox => checkbox.addEventListener('change', updateArticles))
 categoryCheckboxes.forEach(checkbox => checkbox.addEventListener('change', updateArticles))
 loadMoreButton.addEventListener('click', event => updateArticles(event, true))
+menuButton.addEventListener('click', toggleMenu)
+sidebarCloseButton.addEventListener('click', toggleMenu)

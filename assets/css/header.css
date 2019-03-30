@@ -3,7 +3,7 @@
   position: fixed;
   height: 66px;
   width: 100%;
-  padding: 0 20px;
+  padding: 0 25px;
 }
 
 .main-header {
@@ -33,6 +33,8 @@
   color: white;
   font-size: 14px;
   font-weight: bold;
+  text-align: left;
+  padding-left: 25px;
 }
 
 .aside-toggle svg {
@@ -53,4 +55,28 @@
 
 .categories .checkbox-button input[type="checkbox"]:checked + label {
   border: 2px solid #ED4568;
+}
+
+.menu-button {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 20px 10px;
+  text-transform: uppercase;
+}
+
+.menu-button svg {
+  margin-right: 5px;
+}
+
+@media (max-width: 1025px) {
+  .main-header,
+  .sub-header {
+    position: relative;
+  }
+  .sub-header {
+    display: none;
+  }
 }
