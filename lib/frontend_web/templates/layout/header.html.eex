@@ -17,22 +17,25 @@
     </h1>
     <button type="button" class="mobile-show search-button">
     </button>
-    <%# <ul class="widgets inline">
+    <ul class="widgets inline">
       <li class="calendar">
-        <p>2017.05.07. vasárnap</p>
-        <p>Gizella névnapja</p>
+        <p><%= calendar(@today.date) %></p>
+        <p><%= @today.name %></p>
+        <p class="event"><%= @today.holiday %></p>
       </li>
+      <li class="divider"></li>
       <li class="weather">
         <div>
           <p>12°C</p>
           <p>28°C</p>
         </div>
       </li>
+      <li class="divider"></li>
       <li class="rates">
         <p>EUR 313,21</p>
         <p>CHF 256,43</p>
       </li>
-    </ul> %>
+    </ul>
   </div>
   <div class="sub-header inline">
     <div class="inline">

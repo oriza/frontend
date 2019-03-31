@@ -71,6 +71,22 @@
   margin-right: 5px;
 }
 
+.widgets {
+  line-height: 1.5;
+}
+
+.calendar {
+  text-align: right;
+  text-transform: capitalize;
+}
+
+.divider {
+  width: 2px;
+  height: 17px;
+  background: white;
+  margin: 0 20px;
+}
+
 @media (max-width: 1025px) {
   .main-header,
   .sub-header {
