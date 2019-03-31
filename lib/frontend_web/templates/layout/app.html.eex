@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
   </head>
   <body>
-    <%= render "header.html", %{categories: @categories, today: @today} %>
+    <%= render "header.html", %{categories: @categories, today: @today, weather: @weather} %>
     <div class="inline">
       <%= render "aside.html", %{sites: @sites, selected_site_ids: @selected_site_ids} %>
       <main>

@@ -24,11 +24,9 @@
         <p class="event"><%= @today.holiday %></p>
       </li>
       <li class="divider"></li>
-      <li class="weather">
-        <div>
-          <p>12°C</p>
-          <p>28°C</p>
-        </div>
+      <li class="weather" title="<%= @weather.description%>">
+        <p><%= round(@weather.current_temperature) %>°C</p>
+        <img src="images/weather/<%= @weather.icon %>.svg" alt="időjárás ikon" />
       </li>
       <li class="divider"></li>
       <li class="rates">

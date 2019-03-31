@@ -5,17 +5,19 @@ defmodule FrontendWeb.PageController do
   alias Db.Category.Service, as: Category
   alias Db.Article.Service, as: Article
   alias Db.Calendar.Service, as: Calendar
+  alias Db.Weather.Service, as: Weather
 
   def index(conn, _params) do
     sites = Site.lists(["active", "selected"])
     categories = Category.lists()
     today = Calendar.today!()
+    weather = Weather.get_by!("Budapest")
 
     selected_site_ids = get_selected_sites(conn, sites)
 
     articles = Article.lists(selected_site_ids)
 
-    render(conn, "index.html", sites: sites, categories: categories, articles: articles, selected_site_ids: selected_site_ids, today: today)
+    render(conn, "index.html", sites: sites, categories: categories, articles: articles, selected_site_ids: selected_site_ids, today: today, weather: weather)
   end
 
   defp get_selected_sites(conn, sites) do

@@ -80,6 +80,15 @@
   text-transform: capitalize;
 }
 
+.weather {
+  display: flex;
+  align-items: center;
+}
+
+.weather img {
+  margin-left: 5px;
+}
+
 .divider {
   width: 2px;
   height: 17px;
