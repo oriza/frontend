@@ -75,9 +75,21 @@
   line-height: 1.5;
 }
 
+.widgets p {
+  font-size: 13px;
+}
+
 .calendar {
   text-align: right;
+}
+
+.calendar p span {
   text-transform: capitalize;
+}
+
+.calendar .event {
+  color: #ED4568;
+  font-weight: bold;
 }
 
 .weather {
@@ -94,6 +106,10 @@
   height: 17px;
   background: white;
   margin: 0 20px;
+}
+
+header .search-button {
+  width: 80px;
 }
 
 @media (max-width: 1025px) {

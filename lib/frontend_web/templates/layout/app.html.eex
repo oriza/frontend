@@ -11,7 +11,7 @@
   <body>
     <%= render "header.html", %{categories: @categories, today: @today, weather: @weather} %>
     <div class="inline">
-      <%= render "aside.html", %{sites: @sites, selected_site_ids: @selected_site_ids} %>
+      <%= render "aside.html", %{sites: @sites, selected_site_ids: @selected_site_ids, today: @today, weather: @weather} %>
       <main>
         <%= render @view_module, @view_template, assigns %>
       </main>

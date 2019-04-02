@@ -6,7 +6,28 @@
         <path fill-rule="evenodd" clip-rule="evenodd" d="M6.96883 17.948C6.5783 17.5575 6.5783 16.9243 6.96883 16.5338L17.5338 5.96879C17.9244 5.57827 18.5575 5.57827 18.948 5.96879L19.0312 6.05198C19.4218 6.44251 19.4218 7.07567 19.0312 7.4662L8.46623 18.0312C8.0757 18.4217 7.44254 18.4217 7.05201 18.0312L6.96883 17.948Z" fill="white"/>
       </svg>
     </button>
-    <h3>Hírek forrásai</h3> 
+    <div class="widgets-container">
+      <div class="widgets">
+        <div class="calendar">
+          <p><span><%= calendar(@today.date) %></span>, <%= @today.name %> névnapja</p>
+          <p class="event"><%= @today.holiday %></p>
+        </div>
+        <div class="inline">
+          <div class="weather" title="napos, mint a kurva isten">
+            <p><%= round(@weather.current_temperature) %>°C</p>
+            <img src="images/weather/01d.svg" alt="időjárás ikon" />
+          </div>
+          <div class="rates">
+            <p>
+              EUR 313,21
+              <br />
+              CHF 256,43
+            </p>
+          </div>
+        </div>
+      </div>
+      <h3>Hírek forrásai</h3> 
+    </div>
   </div>
   <ul class="sites">
     <%= for site <- @sites do %>

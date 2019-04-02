@@ -17,10 +17,9 @@
     </h1>
     <button type="button" class="mobile-show search-button">
     </button>
-    <ul class="widgets inline">
+    <ul class="widgets inline mobile-hide">
       <li class="calendar">
-        <p><%= calendar(@today.date) %></p>
-        <p><%= @today.name %></p>
+        <p><span><%= calendar(@today.date) %></span>, <%= @today.name %> névnapja</p>
         <p class="event"><%= @today.holiday %></p>
       </li>
       <li class="divider"></li>
@@ -30,8 +29,11 @@
       </li>
       <li class="divider"></li>
       <li class="rates">
-        <p>EUR 313,21</p>
-        <p>CHF 256,43</p>
+        <p>
+          EUR 313,21
+          <br/>
+          CHF 256,43
+        </p>
       </li>
     </ul>
   </div>

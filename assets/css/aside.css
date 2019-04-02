@@ -38,6 +38,49 @@ aside .close-button {
   padding: 15px;
 }
 
+aside .widgets-container {
+  width: 100%;
+}
+
+aside .widgets {
+  width: 100%;
+  max-width: 320px;
+  margin: 50px auto;
+}
+
+aside .widgets .inline {
+  justify-content: center;
+}
+
+aside .calendar {
+  text-align: center;
+}
+
+aside .weather,
+aside .rates {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  height: 52px;
+  border: 2px solid #ED4568;
+  border-left: 0;
+  border-right: 0;
+}
+
+aside .weather {
+  width: 100%;
+  border-right: 1px solid #ED4568;
+}
+
+aside .rates {
+  width: 100%;
+  border-left: 1px solid #ED4568;
+}
+
+aside .rates p {
+  margin-top: 5px;
+}
+
 @media (max-width: 1025px) {
   aside {
     top: 0;
