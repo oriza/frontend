@@ -28,11 +28,12 @@
         <img src="images/weather/<%= @weather.icon %>.svg" alt="időjárás ikon" />
       </li>
       <li class="divider"></li>
-      <li class="rates">
+      <li class="rates" title="MNB középárfolyam - napiarfolyam.hu">
         <p>
-          EUR 313,21
-          <br/>
-          CHF 256,43
+          <%= for rate <- @rates do %>
+            <%= rate.currency %> <%= rate.value %>
+            <br/>
+          <% end %>
         </p>
       </li>
     </ul>

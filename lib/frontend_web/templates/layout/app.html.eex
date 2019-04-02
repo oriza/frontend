@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
   </head>
   <body>
-    <%= render "header.html", %{categories: @categories, today: @today, weather: @weather} %>
+    <%= render "header.html", %{categories: @categories, today: @today, weather: @weather, rates: @rates} %>
     <div class="inline">
-      <%= render "aside.html", %{sites: @sites, selected_site_ids: @selected_site_ids, today: @today, weather: @weather} %>
+      <%= render "aside.html", %{sites: @sites, selected_site_ids: @selected_site_ids, today: @today, weather: @weather, rates: @rates} %>
       <main>
         <%= render @view_module, @view_template, assigns %>
       </main>
