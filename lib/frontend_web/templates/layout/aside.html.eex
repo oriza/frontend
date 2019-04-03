@@ -21,6 +21,11 @@
             <p>
               <%= for rate <- @rates do %>
                 <%= rate.currency %> <%= rate.value %>
+                <%= if rate.did_grow do %>
+                  <span class="did-grow"><img src="images/arrow.svg"></span>
+                <% else %>
+                  <span><img src="images/arrow.svg"></span>
+                <% end %>
                 <br/>
               <% end %>
             </p>

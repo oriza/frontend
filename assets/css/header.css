@@ -101,6 +101,20 @@
   margin-left: 5px;
 }
 
+.rates span {
+  display: inline-block;
+  position: relative;
+  top: 2px;
+}
+
+.rates span.did-grow {
+  transform: rotate(180deg);
+}
+
+.rates span img {
+  width: 10px;
+}
+
 .divider {
   width: 2px;
   height: 17px;
